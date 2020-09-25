@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load socialaccount %}
+<html>
+<link rel="shortcut icon" href="/static/images/newlogosunrise_sun.png" type="image/png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/css/mainpage.css"/>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Sunrise Project</title>
+</head>
+<body>
+<img id="logotype_mainpage" src="/static/images/newlogosunrise_with_title.png" alt="">
+{% if user.is_authenticated %}
+<a href="/accounts/logout">
+    <div class="frame_login">
+        <button type="button" class="btn btn-outline-dark">Выйти</button>
+    </div>
+</a>
+{% else %}
+<a href="{% provider_login_url 'openid' openid='https://steamcommunity.com/openid' %}">
+    <div class="frame_login">
+        <button type="button" class="btn btn-outline-dark">Войти</button>
+    </div>
+</a>
+{% endif %}
+<div class="carouselHeader">
+    <div id="carouselCaptions" class="carousel slide w-75" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCaptions" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="/metrostroi/news">
+                    <img href="/metrostroi/news" src="/static/images/metrostroi_main_page.png" class="d-block w-100"
+                         alt="metrostroi">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Metrostroi</h5>
+                    <p>Metrostroi - это аддон, благодаря которому, вы можете ощутить себя машинистом
+                        настоящего электропоезда.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="/darkrp/news">
+                    <img src="/static/images/darkrp_main_page.png" class="d-block w-100" alt="darkRP">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>DarkRP</h5>
+                    <p>Режим DarkRP игровой режим созданный Rickster. Этот режим - симулятор реальной
+                        жизни.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущая</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующая</span>
+        </a>
+    </div>
+</div>
+
+<div class="frame_articular">
+    <div class="articular">2020 Sunrise Project ©. Не является коммерческой организацией.</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

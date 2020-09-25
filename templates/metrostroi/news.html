@@ -1,0 +1,24 @@
+{% extends 'metrostroi/base.html' %}
+{% load socialaccount %}
+
+{% block title %}Metrostroi заявки{% endblock %}
+
+{% block content %}
+
+
+<div class="news" style="width: 75%; top: 12.5%; margin: 7.5% auto; position: relative;">
+    {% for object in news %}
+    <div class="card" style="margin-bottom: 10px">
+        <div class="card-header">
+            {{object.author}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{object.title}}</h5>
+            <p class="card-text">{{object.title_tag}}</p>
+            <a href="#" class="btn btn-primary">Читать далее...</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
