@@ -1,0 +1,49 @@
+@font-face {
+  font-family: font_title;
+  src: url('/static/fonts/PT_Sans.ttf')  format('truetype');
+}
+
+.carouselHeader {
+    left: 20%;
+    top: 20%;
+    position: absolute;
+}
+
+#logotype_mainpage {
+    min-width: 150px;
+    width: 15%;
+    max-width: 750px;
+    top: 3.5%;
+    left: 3.5%;
+    position: absolute;
+}
+
+.frame_login {
+    right: 5%;
+    top: 8%;
+    width: 7%;
+    height: 6.5%;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.frame_login:hover .login_entrance {
+    color: cornflowerblue;
+}
+
+.frame_articular {
+    width: 100%;
+    height: 5%;
+    bottom: 1px;
+    left: 0;
+    position: absolute;
+}
+
+.frame_articular .articular {
+    text-align: center;
+    font-family: font_title, serif;
+    font-size: 100%;
+    color: black;
+    opacity: .7;
+    position: relative;
+}
